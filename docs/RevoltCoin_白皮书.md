@@ -42,8 +42,14 @@ Over-exploitation of resources and environmental pollution directly undermine th
 ## 2. 问题陈述 / Problem Statement
 
 - 资产阶级对无产阶级压榨导致经济权益失衡  
+  English: Exploitation by the bourgeoisie creates economic imbalance for the proletariat
+
 - 工人权益缺乏有效链上记录与监督  
+  English: Workers’ rights lack effective on-chain records and oversight
+
 - 传统机构与媒体受限，信息传播受阻  
+  English: Traditional institutions and media are constrained, hindering information dissemination
+
 - 数据隐私被侵犯：劳动者个人信息被企业或政府用于监控、约束行为，导致工作与生活完全透明化。  
 - English: Data Privacy Invasion: Workers’ personal data are exploited by corporations or authorities for surveillance, leading to complete transparency in work and life.
 - 零工经济与不稳定就业：平台企业规避劳动合同责任，造成社会保障缺失和收入不稳定。  
@@ -77,7 +83,8 @@ Of the 2% transaction fee, 1% goes to a Workers’ Fund for legal aid and educat
 | 组件                   | 说明                                   | English Description                                                  |
 |----------------------|--------------------------------------|--------------------------------------------------------------------|
 | 合约语言              | Solidity ^0.8.20                      | Contract Language: Solidity ^0.8.20                               |
-| 核心模块              | ERC20、Ownable、Pausable              | Core Modules: ERC20, Ownable, Pausable                            |
+| 核心模块              | ERC20、Ownable、Pausable、ReentrancyGuard | Core Modules: ERC20, Ownable, Pausable, ReentrancyGuard           |
+| 部署者权限            | deployer 保留批量 airdrop 权限        | Deployer retains airdrop privilege                                 |
 | 交易手续费            | 2% (可链上调整，不超过 10%)            | Transaction Fee: 2% (adjustable on-chain, max 10%)                |
 | 压榨基金分配          | 1% 工人基金 + 1% 治理奖励             | Fee Allocation: 1% to Workers’ Fund + 1% to Governance Rewards    |
 | 暂停/恢复             | 紧急情况下 Owner 可暂停所有转账         | Pause/Unpause: Owner can pause all transfers in emergencies       |
@@ -96,6 +103,8 @@ Of the 2% transaction fee, 1% goes to a Workers’ Fund for legal aid and educat
   English: Initial Supply: 1,000,000 RVLT (900,000 retained by deployer, 100,000 for liquidity)
 - **增发上限**：可由 Owner 增发，但总量不超过 10,000,000 RVLT  
   English: Mint Cap: Owner can mint up to a total of 10,000,000 RVLT
+- **空投机制**：部署者可调用 `airdrop` 批量空投，不影响 `MAX_SUPPLY` 限制  
+  English: Airdrop Mechanism: Deployer can perform batch airdrops without exceeding MAX_SUPPLY
 - **燃烧机制**：持币者可自由销毁  
   English: Burn Mechanism: Token holders can burn freely
 
