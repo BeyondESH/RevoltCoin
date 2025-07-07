@@ -162,11 +162,11 @@
 			]
 		},
 		"tests/Revolt_test.sol": {
-			"keccak256": "0x475a7bb8ecca81f9b1baaab7ffb6317ed0da91f173e4984934b3b61df6207bb0",
+			"keccak256": "0xef4bca53e57e9d2fcbbebce5ba5f65ddba07ed0cce88637014feab004eb207fa",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://adec3082f027caf64bd21438a1c285ffcd633aa73474fe6d3b5febd4b56dc9d0",
-				"dweb:/ipfs/Qme9Yuta3fgXzYj5qehNajA7HeHu8srhdbNoEyhyEHgR2g"
+				"bzz-raw://8e903e4167cf670c322172d5b6ecd9a13c0a6b18a2df9e9983eb4c185aff36bd",
+				"dweb:/ipfs/QmWLdyhDjgqodBPvV1TLhkcLa1sUwZPVYBFpcjfmALaW7L"
 			]
 		}
 	},
